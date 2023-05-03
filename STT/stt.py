@@ -20,7 +20,6 @@ def q_callback(indata, frames, time, status):
 def bot_listen(callback):
     with sd.RawInputStream(samplerate=samplerate, blocksize=8000, device=device, dtype='int16',
                            channels=1, callback=q_callback):
-
         rec = vosk.KaldiRecognizer(my_model, samplerate)
         while True:
             data = q.get()

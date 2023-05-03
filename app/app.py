@@ -4,7 +4,6 @@ from NickVoice import bot_voice
 from fuzzywuzzy import fuzz
 import random
 
-
 def va_respond(voice: str):
     print(voice)
     if voice.startswith(config.BOT_ALTER_NAMES):
